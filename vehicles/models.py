@@ -17,9 +17,9 @@ class VehicleType(models.Model):
     class Meta:
         verbose_name = 'Tipo de Veículo'
         verbose_name_plural = 'Tipos de Veículos'
-    
+
     def __str__(self):
-        return self.name
+        return f'{self.name} - {self.description}'
 
 
 class Vehicle(models.Model):
@@ -61,11 +61,11 @@ class Vehicle(models.Model):
         related_name='vehicles',
         verbose_name='Proprietário'
     )
-    created_at= models.DateTimeField(
+    created_at = models.DateTimeField(
         auto_now_add=True,
         verbose_name='Criado em'
     )
-    updated_at= models.DateTimeField(
+    updated_at = models.DateTimeField(
         auto_now=True,
         verbose_name='Atualizado em'
     )

@@ -41,7 +41,7 @@ class ParkingRecord(models.Model):
         on_delete=models.PROTECT,
         related_name='parking_records',
         verbose_name='Vaga'
-    )    
+    )
     entry_time = models.DateTimeField(
         auto_now_add=True,
         verbose_name='Horário de Entrada'
@@ -50,7 +50,7 @@ class ParkingRecord(models.Model):
         blank=True,
         null=True,
         verbose_name='Horário de Saída'
-    ) 
+    )
     created_at = models.DateTimeField(
         auto_now_add=True,
         verbose_name='Criado em'
@@ -66,4 +66,3 @@ class ParkingRecord(models.Model):
 
     def __str__(self):
         return f'{self.vehicle} - {self.parking_spot} - {self.entry_time}'
-    

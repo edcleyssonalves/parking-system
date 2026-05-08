@@ -9,6 +9,7 @@ class ParkingSpotAdmin(admin.ModelAdmin):
     search_fields = ['spot_number',]
     list_filter = ['is_occupied', ]
 
+
 @admin.register(ParkingRecord)
 class ParkingRecordAdmin(admin.ModelAdmin):
     list_display = ['vehicle', 'parking_spot', 'entry_time', 'exit_time']
